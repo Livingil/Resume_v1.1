@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #4a4a4a;
+    background: #f5f0e1;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+}
+
+section {
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+}
+
+.up {
+    display: flex;
+    align-items: center;
+}
+
+.up img {
+    border-radius: 10px;
+    box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.25);
+    margin: 50px;
+    max-width: 250px;
+}
+
+.about-me, .social-links {
+    background: #f5f0e1;
+    padding: 20px;
+    margin: 10px;
+}
+
+.hobbies {
+    background: #d6eadf;
+    color: #4a4a4a;
+    max-width: 500px;
+    padding: 60px;
+}
+.experience {
+     background: #d6eadf;
+    color: #4a4a4a;
+    max-width: 500px;
+    padding: 60px;
+}
+.experience tr:nth-child(odd) {
+    background: #d6eadf;
+}
+
+.experience td:hover {
+    background: #eee;
+}
+
+.contacts {
+    background: #d6eadf;
+     color: #4a4a4a;
+    text-align: center;
+    max-width: 500px;
+}
+
+.btn {
+    background: #e48564;
+    color: #f5f0e1;
+    padding: 15px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn:hover {
+    background: #77aca2;
+    color: #f5f0e1;
+    font-size: medium;
+}
+
+.group label {
+    display: block;
+    color: #77aca2;
+    font-size: 14px;
+}
+
+.group input, .group textarea {
+    width: 50%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 650px) {
+    .up {
+        display: block;
+        text-align: center;
+    }
+    .up img {
+        margin: 20px auto;
+        max-width: 200px;
+    }
+    .group input,
+    .group textarea {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .hobbies, .experience, .contacts {
+        padding: 20px;
+        max-width: 100%;
+    }
+}
