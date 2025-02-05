@@ -1,113 +1,198 @@
+/* Общие стили (Reset) */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
+  }
+  
+  /* Базовые стили тела документа */
+  body {
     color: #4a4a4a;
     background: #f5f0e1;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 18px;
-}
-
-section {
+    line-height: 1.6;
+  }
+  
+  /* Стили для секций */
+  section {
     border-radius: 10px;
     margin: 20px;
     padding: 20px;
-}
-
-.up {
+  }
+  
+  /* Стили для секции "up" (изображение и информация) */
+  .up {
     display: flex;
     align-items: center;
-}
-
-.up img {
+    justify-content: center;
+  }
+  
+  .up img {
     border-radius: 10px;
     box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.25);
-    margin: 50px;
-    max-width: 250px;
-}
-
-.about-me, .social-links {
+    margin: 20px;
+    max-width: 350px;
+    height: auto;
+  }
+  
+  /* Стили для блоков "about-me" и "social-links" */
+  .about-me,
+  .social-links {
     background: #f5f0e1;
     padding: 20px;
     margin: 10px;
-}
-
-.hobbies {
-    background: #d6eadf;
-    color: #4a4a4a;
-    max-width: 500px;
-    padding: 60px;
-}
-.experience {
-     background: #d6eadf;
-    color: #4a4a4a;
-    max-width: 500px;
-    padding: 60px;
-}
-.experience tr:nth-child(odd) {
-    background: #d6eadf;
-}
-
-.experience td:hover {
-    background: #eee;
-}
-
-.contacts {
-    background: #d6eadf;
-     color: #4a4a4a;
+    text-align: center; /* Добавляем центрирование текста */
+  }
+  
+  .social-links h2 {
+    margin-bottom: 10px; /* Уменьшаем отступ под заголовком */
+  }
+  
+  .social-links a {
+    margin: 0 5px; /* Добавляем небольшие отступы между ссылками */
+  }
+  
+  /* Стили для заголовков */
+  h1 {
     text-align: center;
+    margin: 20px auto;
+    font-size: 2.5em;
+    color: #e48564;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+  }
+  
+  h2, h3, h4, h5 {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+  }
+  
+  /* Стили для хобби, опыта работы и контактов */
+  .hobbies,
+  .experience,
+  .contacts {
+    background: #d6eadf;
+    color: #4a4a4a;
     max-width: 500px;
-}
+    padding: 20px;
+    margin: 20px auto;
+  }
 
-.btn {
+  .hobbies ol {
+    padding-left: 20px; /* Добавляем отступ слева для всего списка */
+  }
+  
+  .hobbies li {
+    margin-left: 10px; /* Компенсируем отступ для самих пунктов списка */
+  }
+  
+  /* Стили для таблицы с опытом работы */
+  .experience table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .experience th,
+  .experience td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .experience th {
+    background-color: #c2d9d1;
+    font-weight: bold;
+  }
+  
+  .experience tr:hover {
+    background-color: #eee;
+  }
+  
+  /* Стили для ссылок */
+  a {
+    color: #e48564;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: #77aca2;
+  }
+  
+  /* Стили для кнопок */
+  .btn {
     background: #e48564;
     color: #f5f0e1;
     padding: 15px 20px;
     border-radius: 10px;
     text-decoration: none;
     display: inline-block;
-}
-
-.btn:hover {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .btn:hover {
     background: #77aca2;
     color: #f5f0e1;
-    font-size: medium;
-}
-
-.group label {
+    transform: scale(1.1);
+  }
+  
+  /* Стили для формы контактов */
+  .contacts form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .group {
+    margin-bottom: 15px;
+  }
+  
+  .group label {
     display: block;
     color: #77aca2;
-    font-size: 14px;
-}
-
-.group input, .group textarea {
-    width: 50%;
-    padding: 8px;
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .group input,
+  .group textarea {
+    width: 100%;
+    padding: 10px;
     border: 1px solid #ddd;
-    border-radius: 4px;
-    margin-bottom: 10px;
-}
-
-@media (max-width: 650px) {
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .group input:focus,
+  .group textarea:focus {
+    border-color: #77aca2;
+    outline: none;
+  }
+  
+  /* Адаптивные стили */
+  @media (max-width: 768px) {
     .up {
-        display: block;
-        text-align: center;
+      flex-direction: column;
+      text-align: center;
     }
+  
     .up img {
-        margin: 20px auto;
-        max-width: 200px;
+      margin: 20px auto;
+      max-width: 300px;
     }
+  
+    .hobbies,
+    .experience,
+    .contacts {
+      padding: 20px;
+      max-width: 100%;
+    }
+  
     .group input,
     .group textarea {
-        width: 100%;
-        margin-right: 0;
-        margin-bottom: 10px;
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 10px;
     }
-    .hobbies, .experience, .contacts {
-        padding: 20px;
-        max-width: 100%;
-    }
-}
+  }
